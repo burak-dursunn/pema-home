@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pema Home</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +18,7 @@
     <!-- Sidebar Başlangıç -->
     <div class="sidebar">
       <div class="sidebar-header">
-        <img src="bird.jpg" alt="Marka Logo" class="sidebar-logo">
+        <img src="images/bird.jpg" alt="Marka Logo" class="sidebar-logo">
         <i class="fas fa-times close-btn"></i>
       </div>
       <ul class="sidebar-menu">
@@ -37,20 +40,20 @@
     
     <nav>
       <div class="logo">
-        <img src="bird.jpg" alt="Marka Logo" class="logo-img" />
+        <img src="images/bird.jpg" alt="Marka Logo" class="logo-img" />
       </div>
       <ul>
-        <li><a href="" class="hide-elements">Anasayfa</a></li>
-        <li><a href="" class="hide-elements">Hakkımızda</a></li>
-        <li><a href="" class="hide-elements">Ürünler</a></li>
-        <li><a href="" class="hide-elements">İletişim</a></li>
+        <li><a href="#" class="hide-elements">Anasayfa</a></li>
+        <li><a href="#" class="hide-elements">Hakkımızda</a></li>
+        <li><a href="#" class="hide-elements">Ürünler</a></li>
+        <li><a href="#" class="hide-elements">İletişim</a></li>
         <li><i class="fa-solid fa-magnifying-glass search-icon hide-elements"></i></li>
-        <li><img src="menu.svg" alt="menu" class="menu-btn"></li>
+        <li><img src="ikonlar/menu.svg" alt="menu" class="menu-btn"></li>
       </ul>
     </nav>
     <main>
         <div class="resim">
-            <img src="alone.jpg" alt="alone">
+            <img src="images/alone.jpg" alt="alone">
         </div>
         <div class="hakkimizda">
             <div class="hakkimizda-text">                
@@ -61,7 +64,7 @@
         </div>
         
         <div class="tanitim">
-            <img src="card images/alone.jpg" alt="space">
+            <img src="images/alone.jpg" alt="space">
             <div class="tanitim-text">
               <h1>Yenilikçi ve Özel Tasarım Ürünler</h1>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio minus eligendi quod quo esse fuga rerum labore porro, quae ratione facere earum fugit? Impedit nostrum officia commodi, labore placeat quas?</p>
@@ -72,6 +75,24 @@
         <div class="section-title">
             <h2>Ürünlerimiz</h2>
             <div class="underline"></div>
+        </div>
+        <div class="boxs">
+          <div class="box">
+            <img src="ikonlar/furniture.svg" alt="">
+            <div class="box-text">Yenilikçi Tasarımlar</div>
+          </div>
+          <div class="box">
+            <img src="ikonlar/double-bed.svg" alt="">
+            <div class="box-text">Modern Mobilyalar</div>
+          </div>
+          <div class="box">
+            <img src="ikonlar/empowerment.svg" alt="">
+            <div class="box-text">Ekonomik Fiyatlar</div>
+          </div>
+          <div class="box">
+            <img src="ikonlar/verified.svg" alt="">
+            <div class="box-text">Güvenilir Alışveriş</div>
+          </div>
         </div>
         
         <div class="products">
@@ -158,6 +179,13 @@
         document.querySelector('.overlay').classList.remove('active');
         document.body.style.overflow = 'auto'; // Sayfa kaydırmayı tekrar etkinleştir
       }
+
+      // Ekran boyutu değiştiğinde sidebar'ı kontrol et
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 1100) {
+          closeSidebar();
+        }
+      });
     </script>
   </body>
 </html>

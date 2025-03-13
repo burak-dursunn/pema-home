@@ -1,0 +1,138 @@
+.hakkimizda {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    height: max-content;
+    padding: 2rem;  
+    box-shadow: var(--shadow);
+}
+.hakkimizda-text {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.hakkimizda-text h1 {    
+    font-size: clamp(3rem, 4vw, 4rem);
+}
+.hakkimizda button {
+    align-self: center;
+    justify-self: end;
+    margin-right: 2rem;
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+.hakkimizda button:hover {
+    color: var(--white);
+    background-color: var(--accent-color);
+}
+.tanitim {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));    
+    width: 100%;
+    min-height: 50vh;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+}
+.tanitim h1 {
+    font-size: clamp(3rem, 4vw, 4rem);
+    text-align: center;
+}
+.tanitim img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    transition: transform 0.5s ease;
+}
+.tanitim-text {
+    text-overflow: ellipsis;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.tanitim-text button {
+    align-self: flex-start;
+    background-color: var(--accent-color);
+}
+.tanitim-text button:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+.boxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.boxs .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-weight: 500;
+    width: 15%;
+    height: 100px;
+    gap: 0.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.boxs .box img {
+    align-self: center;
+    width: 25%;
+    aspect-ratio: 1/1;
+    transition: color 0.3s ease;
+}
+.boxs .box img:hover {
+    color: var(--accent-color);
+}
+.boxs .box .box-text {
+    transition: color 0.3s ease;
+}
+.boxs .box .box-text:hover {
+    color: var(--accent-color);
+}
+
+
+.products {
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.products .card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.products .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 20px  rgba(0, 0, 0, 0.2); 
+}
+.products .card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.products .card:hover img { 
+    transform: scale(1.05);
+}
+.products .card h3 {
+    margin: 1rem;
+}
+.products .card p {
+    margin: 0 1rem 1.5rem;
+    flex-grow: 1;
+}
+.products .card button {
+    margin: 0 1rem 1.5rem;
+    align-self: flex-start;
+}
