@@ -53,7 +53,7 @@
     flex-direction: column;
 }
 .tanitim-text button {
-    align-self: flex-start;
+    align-self: center;
     background-color: var(--accent-color);
 }
 .tanitim-text button:hover {
@@ -119,8 +119,7 @@
     display: flex;
     flex-direction: column;
 }
-.products .card:hover {
-    transform: translateY(-10px);
+.products .card:hover {    
     box-shadow: 0px 15px 20px  rgba(0, 0, 0, 0.2); 
 }
 .products .card img {
@@ -140,8 +139,9 @@
     flex-grow: 1;
 }
 .products .card button {
-    margin: 0 1rem 1.5rem;
-    align-self: flex-start;
+    margin: 1rem 1.5rem;
+    align-self: center;
+    width: 95%;
 }
 
 @media screen and (max-width: 800px) {

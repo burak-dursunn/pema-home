@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pema Home Mobilya</title>
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" />
+  </head>
+  <body class="inter">
+    <!-- Sidebar Başlangıç -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <img src="images/bird.jpg" alt="Marka Logo" class="sidebar-logo">
+        <i class="fas fa-times close-btn"></i>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="pemahome.html">Anasayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar Bitiş -->
+    <div class="overlay"></div>
+    <nav>
+      <div class="logo">
+        <img src="images/bird.jpg" alt="Marka Logo" class="logo-img" />
+      </div>
+      <ul>
+        <li><a href="pemahome.html" class="hide-elements">Anasayfa</a></li>
+        <li><a href="hakkimizda.html" class="hide-elements">Hakkımızda</a></li>
+        <li><a href="urunler.html" class="hide-elements">Ürünler</a></li>
+        <li><a href="#" class="hide-elements">İletişim</a></li>
+        <li><i class="fa-solid fa-magnifying-glass search-icon hide-elements"></i></li>
+        <li><img src="ikonlar/menu.svg" alt="menu" class="menu-btn"></li>
+      </ul>
+    </nav>
+
+    <main>
+        <h1>Pema Home Mobilya</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium minus a iusto vitae voluptas reiciendis beatae quo officia nihil doloremque dolore, architecto laboriosam impedit neque deserunt atque quos voluptatibus? Ut cupiditate, aliquid dolores quasi iste velit alias dolore? Error sint ducimus unde mollitia optio ipsam odit commodi pariatur voluptatem! Suscipit necessitatibus laborum illo molestiae ratione, doloribus sed adipisci, rerum omnis illum perferendis reiciendis animi corrupti nostrum doloremque iure neque eius. Perferendis suscipit sapiente non placeat corporis voluptatum cupiditate, odit deleniti doloribus error vitae tenetur architecto quas iusto tempora! Iusto aperiam eveniet necessitatibus consequatur sunt labore adipisci, error ut laborum eaque.</p>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h3>Hakkımızda</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+          </div>
+          <div class="footer-section links">
+            <h3>Bağlantılar</h3>
+            <ul>
+              <li><a href="pemahome.html">Anasayfa</a></li>
+              <li><a href="hakkimizda.html">Hakkımızda</a></li>
+              <li><a href="urunler.html">Ürünler</a></li>
+              <li><a href="#">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="footer-section social">
+            <h3>Sosyal Medya</h3>
+            <div class="social-icons">
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2023 Pema Home | Tüm Hakları Saklıdır
+        </div>
+      </footer>
+      <script>
+        // Menu butonuna tıklandığında sidebar ve overlay'i açma
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+          document.querySelector('.sidebar').classList.add('active');
+          document.querySelector('.overlay').classList.add('active');
+          document.body.style.overflow = 'hidden'; // Sayfa kaydırmayı engelle
+        });
+        
+        // Kapat butonuna veya overlay'e tıklandığında sidebar'ı kapatma
+        document.querySelector('.close-btn').addEventListener('click', closeSidebar);
+        document.querySelector('.overlay').addEventListener('click', closeSidebar);
+        
+        function closeSidebar() {
+          document.querySelector('.sidebar').classList.remove('active');
+          document.querySelector('.overlay').classList.remove('active');
+          document.body.style.overflow = 'auto'; // Sayfa kaydırmayı tekrar etkinleştir
+        }
+  
+        // Ekran boyutu değiştiğinde sidebar'ı kontrol et
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 1100) {
+            closeSidebar();
+          }
+        });
+      </script>
+    </body>
+  </html>
