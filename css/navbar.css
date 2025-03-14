@@ -92,7 +92,6 @@ nav li:not(:last-child) {
     transform: scale(1.1);
 }
 a {
-    height: 100%;
     color: var(--primary-color);
     text-decoration: none;
     display: flex;
@@ -103,11 +102,11 @@ a {
     position: relative;
     display: inline-block ;
 }
-a:hover {
+nav a:hover {
     color: var(--accent-color);
     text-shadow: 0 10px 15px rgba(0, 0, 0, 0.1)
 }
-a::after { 
+nav a::after { 
     content: '';
     position: absolute;
     bottom: -4px;
@@ -118,7 +117,7 @@ a::after {
     transition: transform 0.6s ease;
     transform: scaleX(0);
 }
-a:hover::after {
+nav a:hover::after {
     transform: scaleX(1);
 }
 button {
@@ -169,7 +168,7 @@ main {
 }
 .resim img {
     width: 100%;
-    aspect-ratio: 25/9; 
+    aspect-ratio: 2/1; 
     min-height: 200px;
     object-fit: cover;
     box-shadow: var(--shadow);
@@ -196,11 +195,6 @@ main {
     }
     .hakkimizda {
         grid-template-columns: 1fr;
-        padding: 2rem;
-    }
-    .hakkimizda button {
-        justify-self: center;
-        margin: 0;
     }
     .resim img {
         min-height: 150px;
@@ -214,34 +208,8 @@ main {
     nav a {
         padding: 0 1.5rem;
     }
-    .tanitim {
-        grid-template-columns: 1fr;
-    }
-    
-    .tanitim-text {
-        margin-top: 1rem;
-        text-align: center;
-    }
-    
-    .tanitim-text button {
-        align-self: center;
-        margin: 1rem auto;
-    }
-    
-    main {
-        padding: 1rem;
-    }
 }
-@media screen and (max-width: 480px) {
-   
-    .products {
-        gap: 1rem;
-    }
-    
-    .products .card {
-        margin-bottom: 0;
-    }
-}
+
 .section-title {
     text-align: center;
     margin: 1rem 0 3rem;

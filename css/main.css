@@ -61,43 +61,49 @@
     color: var(--primary-color);
 }
 .boxs {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2rem;
+    margin: 2rem 2rem;
 }
 .boxs .box {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    padding: 1rem;
+    align-items: center;
+    padding: 1rem; 
     font-weight: 500;
-    width: 15%;
     height: 100px;
     gap: 0.5rem;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
+    transition: transform 0.6s ease, box-shadow 0.6s ease-in-out, color 0.6s ease-in-out;
+    text-align: center;
 }
+.boxs .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px #ffb300c6; 
+}
+.boxs .box:hover .box-text {
+    color: var(--accent-color);
+}
+.boxs .box img {
+    transition: filter 0.3s ease;
+}
+
+.boxs .box:hover img {
+    fill: #ffb400;
+}
+
 .boxs .box img {
     align-self: center;
     width: 25%;
+    min-width: 40px;
     aspect-ratio: 1/1;
     transition: color 0.3s ease;
 }
-.boxs .box img:hover {
-    color: var(--accent-color);
-}
-.boxs .box .box-text {
-    transition: color 0.3s ease;
-}
-.boxs .box .box-text:hover {
-    color: var(--accent-color);
-}
-
-
 .products {
-    margin: 2rem auto;
+    margin: 2rem 2rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -106,6 +112,7 @@
     background-color: var(--white);
     border-radius: var(--radius);
     overflow: hidden;
+    text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
     height: 100%;
@@ -135,4 +142,57 @@
 .products .card button {
     margin: 0 1rem 1.5rem;
     align-self: flex-start;
+}
+
+@media screen and (max-width: 800px) {
+    .boxs {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }    
+}
+@media screen and (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    .hakkimizda {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hakkimizda-text {
+        margin-left: 0 !important;
+    }
+    .hakkimizda button {
+        align-self: center;
+        margin: 1rem auto;
+    }
+    .tanitim {
+        grid-template-columns: 1fr;
+    }
+    .tanitim-text {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .tanitim-text button {
+        align-self: center;
+        margin: 1rem auto;
+    }
+
+}
+@media screen and (max-width: 576px) {
+    .boxs {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    .products {
+        gap: 1rem;
+    }
+    .products .card {
+        margin-bottom: 0;
+    }
+    .products .card button {
+        align-self: center;
+    }
 }
