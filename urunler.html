@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pema Home Mobilya</title>
+    <title>Pema Home Mobilya - Ürünler</title>
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/sidebar.css">
@@ -12,19 +12,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" />
   </head>
+  
   <body class="inter">
     <!-- Sidebar Başlangıç -->
     <div class="sidebar">
       <div class="sidebar-header">
-        <img src="images/bird.jpg" alt="Marka Logo" class="sidebar-logo">
+        <img src="ikonlar/PemaHome-Logocuk.svg" alt="Marka Logo" class="sidebar-logo">
         <i class="fas fa-times close-btn"></i>
       </div>
       <ul class="sidebar-menu">
         <li><a href="pemahome.html">Anasayfa</a></li>
         <li><a href="hakkimizda.html">Hakkımızda</a></li>
-        <li><a href="urunler.html">Ürünler</a></li>
+        <li><a href="urunler.html" class="active">Ürünler</a></li>
         <li><a href="#">İletişim</a></li>
       </ul>
       <div class="sidebar-footer">
@@ -39,58 +41,109 @@
     <div class="overlay"></div>
     <nav>
       <div class="logo">
-        <img src="images/bird.jpg" alt="Marka Logo" class="logo-img" />
+        <img src="ikonlar/PemaHome-Logo.svg" alt="Marka Logo" class="logo-img" />
       </div>
       <ul>
         <li><a href="pemahome.html" class="hide-elements">Anasayfa</a></li>
         <li><a href="hakkimizda.html" class="hide-elements">Hakkımızda</a></li>
-        <li><a href="urunler.html" class="hide-elements">Ürünler</a></li>
+        <li><a href="urunler.html" class="hide-elements active">Ürünler</a></li>
         <li><a href="#" class="hide-elements">İletişim</a></li>
-        <li><i class="fa-solid fa-magnifying-glass search-icon hide-elements"></i></li>
         <li><img src="ikonlar/menu.svg" alt="menu" class="menu-btn"></li>
       </ul>
     </nav>
     <main>
-        <div class="products">
-            <div class="card">
-                <img src="images/anime.jpg" alt="anime">
-                <h3>Ürün Adı</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, sapiente?</p>
-                <button>Devamı</button>
-              </div>
-            <div class="card">
-                <img src="images/angel.-boy.jpg" alt="angel-boy">
-                <h3>Ürün Adı</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, sapiente?</p>
-                <button>Devamı</button>
-              </div>
-            <div class="card">
-                <img src="images/anime-katana.jpg" alt="anime-katana">
-                <h3>Ürün Adı</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, sapiente?</p>
-                <button>Devamı</button>
-              </div>
-            <div class="card">
-                <img src="images/anime-girl-glasses-red-eyes-mask-tattoo-kimono-4k-wallpaper-uhdpaper.com-133@2@a.jpg" alt="anime-girl">
-                <h3>Ürün Adı</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, sapiente?</p>
-                <button>Devamı</button>
-              </div>
-            <div class="card">
-                <img src="images/erenim.jpg" alt="eren">
-                <h3>Ürün Adı</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, sapiente?</p>
-                <button>Devamı</button>
-              </div>
-            <div class="card">
-                <img src="images/anime-girl-oni-mask-red-eyes-horn-4k-wallpaper-uhdpaper.com-277@5@b.jpg" alt="anime-girl">
-                <h3>Ürün Adı</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci, sapiente?</p>
-                <button>Devamı</button>
+        <!-- Ürünler Banner -->
+        <div class="products-hero">
+            <div class="hero-content">
+                <h1 class="birthstone-regular">Ürün Koleksiyonlarımız</h1>
+                <p>Farklı yaşam tarzları ve ihtiyaçlar için özel olarak tasarlanmış mobilya serilerimiz</p>
+            </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div class="quick-nav">
+          <h2>Koleksiyonlarımız</h2>
+          <div class="series-selector">
+              <div class="series-buttons">
+                  <a href="premium.html">Premium Serisi</a>
+                  <a href="elite.html">Elite Serisi</a>
+                  <a href="star.html">Star Serisi</a>
               </div>
           </div>
-    </main>
+      </div>
 
+        <!-- Seri Tanıtımı -->
+        <div class="series-showcase">
+            <!-- Premium Seri -->
+            <div class="series-card premium-card">
+              <div class="series-image">
+                <img src="images/anime.jpg" alt="Premium Seri">
+                <div class="series-overlay"></div>
+              </div>
+              <div class="series-content">
+                    <h2>Premium Seri</h2>
+                    <p>Eşsiz lüks ve konfor için tasarlanmış, en kaliteli malzemelerle üretilen Premium koleksiyonumuz</p>
+                    <a href="premium.html">Keşfet</a>
+                </div>
+            </div>
+
+            <!-- Elite Seri -->
+            <div class="series-card elite-card">
+                <div class="series-image">
+                    <img src="images/Angel_Girl.jpg" alt="Elite Seri">
+                    <div class="series-overlay"></div>
+                </div>
+                <div class="series-content">
+                    <h2>Elite Seri</h2>
+                    <p>Modern ve estetik tasarım anlayışıyla üretilen, yüksek kaliteli Elite koleksiyonumuz</p>
+                    <a href="elite.html">Keşfet</a>
+                </div>
+            </div>
+
+            <!-- Star Seri -->
+            <div class="series-card star-card">
+                <div class="series-image">
+                    <img src="images/Reaper_Soul.jpg" alt="Star Seri">
+                    <div class="series-overlay"></div>
+                </div>
+                <div class="series-content">
+                    <h2>Star Seri</h2>
+                    <p>Ekonomik fiyat ve yüksek kalite avantajıyla sunulan, kullanışlı Star koleksiyonumuz</p>
+                    <a href="star.html">Keşfet</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kalite Taahhüdü -->
+        <div class="quality-promise">
+            <div class="quality-content">
+                <h2>Kalite Taahhüdümüz</h2>
+                <p>Pema Home olarak her ürünümüzde en yüksek kaliteyi sunmayı taahhüt ediyoruz. Tüm mobilyalarımız dayanıklılık ve estetik açısından titizlikle test edilmektedir.</p>
+                <div class="quality-features">
+                    <div class="feature">
+                        <i class="fas fa-award"></i>
+                        <h3>Premium Kalite</h3>
+                        <p>Tüm ürünlerimiz yüksek kaliteli malzemelerle üretilir.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Dayanıklılık</h3>
+                        <p>Mobilyalarımız uzun yıllar kullanım için tasarlanmıştır.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tree"></i>
+                        <h3>Sürdürülebilirlik</h3>
+                        <p>Çevreye duyarlı üretim süreçleri uyguluyoruz.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h3>Güvenli Teslimat</h3>
+                        <p>Ürünleriniz özenle paketlenir ve güvenle teslim edilir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer class="footer">
         <div class="footer-content">
@@ -112,12 +165,12 @@
             <div class="social-icons">
               <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
             </div>
           </div>
         </div>
         <div class="footer-bottom">
-          &copy; 2023 Pema Home | Tüm Hakları Saklıdır
+          &copy; 2025 Pema Home | Tüm Hakları Saklıdır
         </div>
       </footer>
       <script>

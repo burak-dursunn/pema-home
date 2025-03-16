@@ -30,7 +30,6 @@
 .sidebar-logo {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
     object-fit: cover;
     border: 2px solid var(--white);
 }
@@ -65,11 +64,27 @@
     text-decoration: none;
     transition: background-color 0.3s;
     font-weight: 500;
+    position: relative;
 }
 
-.sidebar-menu li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.sidebar-menu li a:hover, .sidebar-menu li a.active {
     color: var(--accent-color);
+}
+
+.sidebar-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    background: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-menu li a:hover::after, .sidebar-menu li a.active::after {
+    transform: scaleX(1);
 }
 
 .sidebar-footer {

@@ -12,17 +12,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" />
   </head>
   <body class="inter">
     <!-- Sidebar Başlangıç -->
     <div class="sidebar">
       <div class="sidebar-header">
-        <img src="images/bird.jpg" alt="Marka Logo" class="sidebar-logo">
+        <img src="ikonlar/PemaHome-Logocuk.svg" alt="Marka Logo" class="sidebar-logo">
         <i class="fas fa-times close-btn"></i>
       </div>
       <ul class="sidebar-menu">
-        <li><a href="pemahome.html">Anasayfa</a></li>
+        <li><a href="pemahome.html" class="active">Anasayfa</a></li>
         <li><a href="hakkimizda.html">Hakkımızda</a></li>
         <li><a href="urunler.html">Ürünler</a></li>
         <li><a href="#">İletişim</a></li>
@@ -40,40 +41,42 @@
     
     <nav>
       <div class="logo">
-        <img src="images/bird.jpg" alt="Marka Logo" class="logo-img" />
+        <img src="ikonlar/PemaHome-Logo.svg" alt="Marka Logo" class="logo-img" />
       </div>
       <ul>
-        <li><a href="pemahome.html" class="hide-elements">Anasayfa</a></li>
+        <li><a href="pemahome.html" class="hide-elements active">Anasayfa</a></li>
         <li><a href="hakkimizda.html" class="hide-elements">Hakkımızda</a></li>
         <li><a href="urunler.html" class="hide-elements">Ürünler</a></li>
         <li><a href="#" class="hide-elements">İletişim</a></li>
-        <li><i class="fa-solid fa-magnifying-glass search-icon hide-elements"></i></li>
         <li><img src="ikonlar/menu.svg" alt="menu" class="menu-btn"></li>
       </ul>
     </nav>
     <main>
-        <div class="resim">
-            <img src="images/alone.jpg" alt="alone">
+        <div class="welcome">
+          <h1 class="birthstone-regular">Hoşgeldiniz</h1>
+          <p>Mobilyalarımızın her detayında profesyonelliği hissedin.</p>
         </div>
+
+        <div class="tanitim">
+          <img src="images/alone.jpg" alt="space">
+          <div class="tanitim-text">
+            <h1>Yenilikçi ve Özel Tasarım Ürünler</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio minus eligendi quod quo esse fuga rerum labore porro, quae ratione facere earum fugit? Impedit nostrum officia commodi, labore placeat quas?</p>
+            <button onclick="window.location.href='urunler.html'">Devamı</button>
+          </div>
+      </div>
+
         <div class="hakkimizda">
             <div class="hakkimizda-text">                
             <h1>Pema Home Olarak;</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo exercitationem maiores vitae repellendus odit impedit accusantium placeat animi dolores dolor illum ex mollitia, enim quam et blanditiis eos consectetur?</p>
+            <p> Kaliteyi estetikle buluşturarak
+              şıklık ve konforu evinize getiriyoruz.</p>
             </div>
-            <button >Devamı</button>
-        </div>
-        
-        <div class="tanitim">
-            <img src="images/alone.jpg" alt="space">
-            <div class="tanitim-text">
-              <h1>Yenilikçi ve Özel Tasarım Ürünler</h1>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio minus eligendi quod quo esse fuga rerum labore porro, quae ratione facere earum fugit? Impedit nostrum officia commodi, labore placeat quas?</p>
-              <button>Devamı</button>
-            </div>
+            <button onclick="window.location.href='hakkimizda.html'">Devamı</button>
         </div>
         
         <div class="section-title">
-            <h2>Ürünlerimiz</h2>
+            <h2>ÜRÜNLERİMİZ</h2>
             <div class="underline"></div>
 
         </div>
@@ -83,7 +86,7 @@
             <a href="#" class="box-text">Modern Mobilyalar</a> 
           </div>
           <div class="box">
-            <img src="ikonlar/empowerment.svg" alt="">
+            <img src="ikonlar/save-money.png" alt="">
             <a href="#" class="box-text">Ekonomik Fiyatlar</a> 
           </div>
           <div class="box">
@@ -91,7 +94,7 @@
             <a href="#" class="box-text">Güvenilir Alışveriş</a> 
           </div>
           <div class="box">
-            <img src="ikonlar/home.svg" alt="">
+            <img src="ikonlar/home.png" alt="">
             <a href="#" class="box-text">Evinizi Baştan Yaratın</a> 
           </div>
         </div>
@@ -100,37 +103,37 @@
           <div class="card">
               <img src="images/anime.jpg" alt="anime">
               <h3>Ürün Adı</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo exercitationem maiores vitae repellendus odit impedit accusantium placeat animi dolores dolor illum ex mollitia, enim quam et blanditiis eos consectetur?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, blanditiis?</p>
               <button>Devamı</button>
             </div>
           <div class="card">
               <img src="images/angel.-boy.jpg" alt="angel-boy">
               <h3>Ürün Adı</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo exercitationem maiores vitae repellendus odit impedit accusantium placeat animi dolores dolor illum ex mollitia, enim quam et blanditiis eos consectetur?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, blanditiis?</p>
               <button>Devamı</button>
             </div>
           <div class="card">
               <img src="images/anime-katana.jpg" alt="anime-katana">
               <h3>Ürün Adı</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo exercitationem maiores vitae repellendus odit impedit accusantium placeat animi dolores dolor illum ex mollitia, enim quam et blanditiis eos consectetur?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, blanditiis?</p>
               <button>Devamı</button>
             </div>
           <div class="card">
               <img src="images/anime-girl-glasses-red-eyes-mask-tattoo-kimono-4k-wallpaper-uhdpaper.com-133@2@a.jpg" alt="anime-girl">
               <h3>Ürün Adı</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo exercitationem maiores vitae repellendus odit impedit accusantium placeat animi dolores dolor illum ex mollitia, enim quam et blanditiis eos consectetur?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, blanditiis?</p>
               <button>Devamı</button>
             </div>
           <div class="card">
               <img src="images/erenim.jpg" alt="eren">
               <h3>Ürün Adı</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo exercitationem maiores vitae repellendus odit impedit accusantium placeat animi dolores dolor illum ex mollitia, enim quam et blanditiis eos consectetur?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, blanditiis?</p>
               <button>Devamı</button>
             </div>
           <div class="card">
               <img src="images/anime-girl-oni-mask-red-eyes-horn-4k-wallpaper-uhdpaper.com-277@5@b.jpg" alt="anime-girl">
               <h3>Ürün Adı</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo exercitationem maiores vitae repellendus odit impedit accusantium placeat animi dolores dolor illum ex mollitia, enim quam et blanditiis eos consectetur?</p>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, blanditiis?</p>
               <button>Devamı</button>
             </div>
         </div>
@@ -155,12 +158,12 @@
           <div class="social-icons">
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
-        &copy; 2023 Pema Home | Tüm Hakları Saklıdır
+        &copy; 2025 Pema Home | Tüm Hakları Saklıdır
       </div>
     </footer>
     <script>

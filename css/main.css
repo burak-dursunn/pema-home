@@ -1,3 +1,48 @@
+main {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Temel Grid Yapıları */
+.boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin: 2rem 2rem;
+}
+
+.products {
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.product-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem auto 4rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Ana sayfa stilleri */
+.welcome {
+    padding-bottom: 5rem;
+}
+.welcome h1 {
+    margin-top: 3rem;
+    font-size: clamp(6rem, calc(13vw + 1rem), 15vw);     
+}
+.welcome p{
+    font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+}
 .hakkimizda {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -6,26 +51,32 @@
     padding: 2rem;  
     box-shadow: var(--shadow);
 }
+
 .hakkimizda-text {
     margin-left: 3rem;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
-.hakkimizda-text h1 {    
-    font-size: clamp(3rem, 4vw, 4rem);
-}
+
 .hakkimizda button {
+    font-family: "Inter", sans-serif;
     align-self: center;
     justify-self: end;
     margin-right: 2rem;
-    background-color: var(--white);
-    color: var(--primary-color);
+    background-color: #D5C3AA; /* Bej accent color */
+    color: #2B2D42; /* Koyu renk - premium kontrast */
+    height: 3rem;
+    width: 10rem;
+    font-weight: 600;
+    border: none;
+    transition: var(--transition);
 }
+
 .hakkimizda button:hover {
-    color: var(--white);
-    background-color: var(--accent-color);
+    background-color: #BEA989; /* Daha koyu bej */
 }
+
 .tanitim {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));    
@@ -35,10 +86,11 @@
     background-color: var(--white);
     box-shadow: var(--shadow);
 }
+
 .tanitim h1 {
-    font-size: clamp(3rem, 4vw, 4rem);
     text-align: center;
 }
+
 .tanitim img {
     width: 100%;
     height: 90%;
@@ -46,26 +98,27 @@
     box-shadow: var(--shadow);
     transition: transform 0.5s ease;
 }
+
 .tanitim-text {
     text-overflow: ellipsis;
     padding: 1rem;
     display: flex;
     flex-direction: column;
 }
+
 .tanitim-text button {
+    font-family: "Inter", sans-serif;
     align-self: center;
-    background-color: var(--accent-color);
+    background-color: #D5C3AA; /* Bej accent color */
+    color: #2B2D42; /* Koyu renk - premium kontrast */
+    width: 8rem;
 }
+
 .tanitim-text button:hover {
-    background-color: white;
-    color: var(--primary-color);
+    background-color: #BEA989; /* Daha koyu bej */
 }
-.boxs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 2rem;
-    margin: 2rem 2rem;
-}
+
+/* İkonlar ve kutular */
 .boxs .box {
     display: flex;
     flex-direction: column;
@@ -80,19 +133,10 @@
     transition: transform 0.6s ease, box-shadow 0.6s ease-in-out, color 0.6s ease-in-out;
     text-align: center;
 }
+
 .boxs .box:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px 5px #ffb300c6; 
-}
-.boxs .box:hover .box-text {
-    color: var(--accent-color);
-}
-.boxs .box img {
-    transition: filter 0.3s ease;
-}
-
-.boxs .box:hover img {
-    fill: #ffb400;
+    box-shadow: 0px 0px 15px 5px var(--accent-color); 
 }
 
 .boxs .box img {
@@ -100,14 +144,10 @@
     width: 25%;
     min-width: 40px;
     aspect-ratio: 1/1;
-    transition: color 0.3s ease;
+    transition: filter 0.3s ease;
 }
-.products {
-    margin: 2rem 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
+
+/* Ürün Kartları */
 .products .card {
     background-color: var(--white);
     border-radius: var(--radius);
@@ -118,41 +158,637 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-.products .card:hover {    
-    box-shadow: 0px 15px 20px  rgba(0, 0, 0, 0.2); 
-}
+
 .products .card img {
     width: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
-.products .card:hover img { 
+
+.products .card img:hover { 
     transform: scale(1.05);
 }
+
 .products .card h3 {
     margin: 1rem;
 }
+
 .products .card p {
     margin: 0 1rem 1.5rem;
     flex-grow: 1;
 }
+
 .products .card button {
-    margin: 1rem 1.5rem;
+    font-family: "Inter", sans-serif;
     align-self: center;
-    width: 95%;
+    width: 80%;
+    margin: 1.5rem auto;
+    margin-top: 1rem;
+    background-color: #D5C3AA; /* Bej accent color */
+    color: #2B2D42; /* Koyu renk - premium kontrast */
+    font-weight: 600;
+}
+
+.products .card button:hover {
+    background-color: #BEA989; /* Daha koyu bej */
+}
+
+/* Ürün Grid Kartları */
+.product-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.product-slider {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    width: 200%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slider-image {
+    width: 50%;
+    height: 100%;
+}
+
+.slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+    background-color: #fff;
+}
+
+/* Ürün Bilgisi */
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-info h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.product-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.product-price {
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.product-info button {
+    width: 100%;
+    padding: 0.8rem 0;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-info button:hover {
+    background-color: #000;
+}
+
+/* Hakkımızda Sayfası Stilleri */
+.hakkimizda-hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.hakkimizda-hero h1 {
+    margin-top: 3rem;
+    margin-bottom: 0.5rem;
+    font-size: clamp(6rem, calc(13vw + 1rem), 15vw);    
+    font-weight: 400;
+}
+
+.hakkimizda-hero .hero-text {
+    font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+}
+
+.hakkimizda-section {
+    padding: 1rem 2rem 3rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-container h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--primary-color);
+}
+
+.text-container p {
+    text-align: left;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+.mission-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    max-width: 1200px;
+}
+
+.mission, .vision {
+    background-color: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission:hover, .vision:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-size: 2rem;
+}
+
+.mission h2, .vision h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+}
+
+.values-section {
+    align-content: center;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.values-section h2 {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.value-item {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-10px);
+}
+
+.value-item .icon-container {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.value-item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Ürünler Sayfası Stilleri */
+.products-hero {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.products-hero h1 {
+    margin-top: 3rem;
+    font-size: clamp(4rem, calc(11vw + 1rem), 14vw);
+    font-weight: 400;
+}
+
+.products-hero .hero-text {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 1.5rem auto 0;
+}
+
+/* Seri Detay Sayfaları Ortak Stilleri */
+.series-banner {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+}
+
+.series-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+@media screen and (max-width: 600px) {
+    .series-banner img {
+        object-fit: contain;
+    }
+}
+
+/* Fullscreen Görüntüleme */
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fullscreen-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-fullscreen:hover {
+    color: #f44336;
+}
+
+/* Ürün Serileri Stilleri */
+.series-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.series-buttons {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.series-buttons a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+.series-buttons a:hover {
+    transform: translateY(-4px);
+}
+
+.series-buttons a[href="premium.html"]{
+    border: 2px solid #8A7156;  
+}
+.series-buttons a[href="elite.html"]{
+    border: 2px solid #9C8468;  
+}
+.series-buttons a[href="star.html"]{
+    border: 2px solid #BEA989;
+}
+
+/* Premium seri renkleri */
+.series-buttons a[href="premium.html"] {
+    color: #8A7156;
+}
+.series-buttons a[href="premium.html"]:hover {
+    color: #6A563D;
+}
+
+/* Elite seri renkleri */
+.series-buttons a[href="elite.html"] {
+    color: #9C8468;
+}
+.series-buttons a[href="elite.html"]:hover {
+    color: #7C6748;
+}
+
+/* Star seri renkleri */
+.series-buttons a[href="star.html"] {
+    color: #BEA989;
+}
+.series-buttons a[href="star.html"]:hover {
+    color: #A89774;
+}
+
+/* Butonlar - Seriler */
+.series-content a {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+    background-color: #D5C3AA; /* Bej accent color */
+    color: #2B2D42; /* Koyu renk */
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.series-content a:hover {
+    background-color: #BEA989; /* Daha koyu bej */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Premium, Elite ve Star serilerine özel buton renkleri */
+.premium-card .series-content a {
+    background-color: #8A7156; /* Koyu bej/kahve - premium */
+    color: white;
+}
+
+.premium-card .series-content a:hover {
+    background-color: #6A563D; /* Daha koyu ton */
+}
+
+.elite-card .series-content a {
+    background-color: #9C8468; /* Orta bej/kahve - elite */
+    color: white;
+}
+
+.elite-card .series-content a:hover {
+    background-color: #7C6748; /* Daha koyu ton */
+}
+
+.star-card .series-content a {
+    background-color: #BEA989; /* Açık bej - star */
+    color: white;
+}
+
+.star-card .series-content a:hover {
+    background-color: #A89774; /* Daha koyu ton */
+}
+
+/* Seri Showcase */
+.series-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.series-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.series-image {
+    position: relative;
+    height: 250px;
+}
+
+.series-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.series-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+}
+
+.series-content {
+    padding: 0 2rem 2rem;
+    text-align: center;
+}
+
+.series-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.series-content p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Premium, Elite, Star Seri Kart Stilleri */
+.premium-card .series-content h2 {
+    color: #8A7156;
+}
+
+.elite-card .series-content h2 {
+    color: #9C8468;
+}
+
+.star-card .series-content h2 {
+    color: #BEA989;
+}
+
+/* Quick Navigation */
+.quick-nav {
+    background-color: #f5f5f5;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.quick-nav h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Kalite Taahhüdü */
+.quality-promise {
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(to bottom, #F8F5F1, #F0EAE2);
+}
+
+.quality-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quality-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.quality-content > p {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.quality-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.feature h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.feature p {
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .section-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 800px) {
     .boxs {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-    }    
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
 }
-@media screen and (max-width: 768px) {
+
+@media (max-width: 768px) {
     main {
         padding: 1rem;
     }
+    
     .hakkimizda {
         grid-template-columns: 1fr !important;
     }
@@ -160,13 +796,16 @@
     .hakkimizda-text {
         margin-left: 0 !important;
     }
+    
     .hakkimizda button {
         align-self: center;
         margin: 1rem auto;
     }
+    
     .tanitim {
         grid-template-columns: 1fr;
     }
+    
     .tanitim-text {
         margin-top: 1rem;
         text-align: center;
@@ -176,23 +815,73 @@
         align-self: center;
         margin: 1rem auto;
     }
-
+    
+    .series-banner {
+        max-height: 450px;
+    }
+    
+    .series-banner img {
+        max-height: 450px;
+    }
+    
+    .product-slider {
+        height: 200px;
+    }
+    
+    .series-buttons {
+        gap: 1.5rem;
+    }
+    
+    .series-buttons a {
+        font-size: 1rem;
+    }
 }
-@media screen and (max-width: 576px) {
+
+@media (max-width: 576px) {
     .boxs {
         grid-template-columns: 1fr;
         max-width: 400px;
-        margin: 0 auto;
+        
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 0 1.2rem;
     }
 }
-@media screen and (max-width: 480px) {
+
+@media (max-width: 480px) {
     .products {
         gap: 1rem;
     }
+    
     .products .card {
         margin-bottom: 0;
     }
+    
     .products .card button {
         align-self: center;
+    }
+    
+    .series-banner {
+        max-height: 350px;
+    }
+    
+    .series-banner img {
+        max-height: 350px;
+    }
+    
+    .product-slider {
+        height: 180px;
+    }
+    
+    .series-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .series-buttons a {
+        padding: 1rem 0.7rem;
     }
 }
