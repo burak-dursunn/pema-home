@@ -244,20 +244,6 @@ main {
         padding: 0 0.5rem;
     }
 }
-
-.section-title {
-    text-align: center;
-    margin: 1rem 0 3rem;
-    position: relative;
-}
-
-.section-title h2 {
-    font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
 .underline {
     height: 4px;
     width: 100px;
