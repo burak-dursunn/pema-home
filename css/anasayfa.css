@@ -1,0 +1,383 @@
+main {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Temel Grid Yapıları */
+.boxs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin: 2rem 2rem;
+}
+
+.products {
+    padding: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.product-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 2rem auto 4rem;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+/* Ana sayfa stilleri */
+.welcome {
+    padding-bottom: 5rem;
+}
+.welcome h1 {
+    margin-top: 3rem;
+    font-size: clamp(6rem, calc(13vw + 1rem), 15vw);     
+}
+.welcome p{
+    font-size: clamp(1.2rem, 1.5vw, 1.7rem);
+}
+.hakkimizda {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    height: max-content;
+    padding: 2rem;  
+    box-shadow: var(--shadow);
+}
+.tanitim h2, .hakkimizda h2 {
+    text-align: center;
+    font-size: clamp(2rem, calc(3vw + 1rem), 5rem);
+    color: var(--primary-color);
+}
+.hakkimizda-text {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.hakkimizda button {
+    font-family: "Inter", sans-serif;
+    align-self: center;
+    justify-self: end;
+    margin-right: 2rem;
+    background-color: #D5C3AA; /* Bej accent color */
+    color: #2B2D42; /* Koyu renk - premium kontrast */
+    height: 3rem;
+    width: 10rem;
+    font-weight: 600;
+    border: none;
+    transition: var(--transition);
+}
+
+.hakkimizda button:hover {
+    background-color: #BEA989; /* Daha koyu bej */
+}
+
+.tanitim {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));    
+    width: 100%;
+    min-height: 50vh;
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+}
+
+.tanitim h1 {
+    text-align: center;
+}
+
+.tanitim img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    transition: transform 0.5s ease;
+}
+
+.tanitim-text {
+    text-overflow: ellipsis;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tanitim-text button {
+    font-family: "Inter", sans-serif;
+    align-self: center;
+    background-color: #D5C3AA; /* Bej accent color */
+    color: #2B2D42; /* Koyu renk - premium kontrast */
+    width: 8rem;
+}
+
+.tanitim-text button:hover {
+    background-color: #BEA989; /* Daha koyu bej */
+}
+.section-title {
+    text-align: center;
+    margin: 1rem 0 3rem;
+    margin-bottom: 2rem;
+}
+.section-title h2 {
+    position: relative;
+    display: inline-block;
+    font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 15px;
+}
+
+/* İkonlar ve kutular */
+.boxs .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; 
+    font-weight: 500;
+    height: 100px;
+    gap: 0.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.6s ease, box-shadow 0.6s ease-in-out, color 0.6s ease-in-out;
+    text-align: center;
+}
+
+.boxs .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px 5px var(--accent-color); 
+}
+
+.boxs .box img {
+    align-self: center;
+    width: 25%;
+    min-width: 40px;
+    aspect-ratio: 1/1;
+    transition: filter 0.3s ease;
+}
+
+/* Ürün Kartları */
+.products .card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.products .card img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.products .card img:hover { 
+    transform: scale(1.05);
+}
+
+.products .card h3 {
+    margin: 1rem;
+}
+
+.products .card p {
+    margin: 0 1rem 1.5rem;
+    flex-grow: 1;
+}
+
+.products .card button {
+    font-family: "Inter", sans-serif;
+    align-self: center;
+    width: 80%;
+    margin: 1.5rem auto;
+    margin-top: 1rem;
+    background-color: #D5C3AA; /* Bej accent color */
+    color: #2B2D42; /* Koyu renk - premium kontrast */
+    font-weight: 600;
+}
+
+.products .card button:hover {
+    background-color: #BEA989; /* Daha koyu bej */
+}
+/* Fullscreen Görüntüleme */
+.fullscreen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.fullscreen-container.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fullscreen-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.close-fullscreen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-fullscreen:hover {
+    color: #f44336;
+}
+
+
+@media (max-width: 992px) {
+    .section-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .mission-vision {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .boxs {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .hakkimizda {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .hakkimizda-text {
+        margin-left: 0 !important;
+    }
+    
+    .hakkimizda button {
+        align-self: center;
+        margin: 1rem auto;
+    }
+    
+    .tanitim {
+        grid-template-columns: 1fr;
+    }
+    
+    .tanitim-text {
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .tanitim-text button {
+        align-self: center;
+        margin: 1rem auto;
+    }
+    
+    .series-banner {
+        max-height: 450px;
+    }
+    
+    .series-banner img {
+        max-height: 450px;
+    }
+    
+    .product-slider {
+        height: 200px;
+    }
+    
+    .series-buttons {
+        gap: 1.5rem;
+    }
+    
+    .series-buttons a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .boxs {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+        padding: 0 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        gap: 1rem;
+    }
+    
+    .products .card {
+        margin-bottom: 0;
+    }
+    
+    .products .card button {
+        align-self: center;
+    }
+    
+    .series-banner {
+        max-height: 350px;
+    }
+    
+    .series-banner img {
+        max-height: 350px;
+    }
+    
+    .product-slider {
+        height: 180px;
+    }
+    
+    .series-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .series-buttons a {
+        padding: 1rem 0.7rem;
+    }
+}
